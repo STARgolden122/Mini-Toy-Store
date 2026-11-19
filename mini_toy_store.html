@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Toy Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #0878ed;
+            --background-color: #f0f7ff;
+            --border-radius: 10px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: white;
+            padding: 15px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #17376c;
+        }
+
+        .nav-link {
+            color: #444;
+            font-size: 13px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #35c5a7, #1762a5);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 14px;
+        }
+
+        .hero button {
+            background-color: white;
+            color: #0878ed;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+
+        .toys {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .toys h2 {
+            font-size: 22px;
+            color: #17376c;
+            margin-bottom: 25px;
+        }
+
+        .toy-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .toy-card h3 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .toy-card p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .toy-card button {
+            background-color: var(--main-color);
+            color: white;
+            border: none;
+            padding: 7px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .toy-card:nth-child(2) button {
+            background-color: #ffbd00;
+            color: black;
+        }
+
+        .toy-card:nth-child(3) button {
+            background-color: #159b62;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Toy Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Toys</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="toyCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero">
+                    <h1>Educational Toys</h1>
+                    <p>Fun toys that help you learn new things.</p>
+                    <button>Explore Now</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero">
+                    <h1>Action Figures</h1>
+                    <p>Discover your favorite action heroes.</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero">
+                    <h1>Board Games</h1>
+                    <p>Fun games for family and friends.</p>
+                    <button>View Games</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#toyCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#toyCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <section class="toys">
+        <div class="container">
+            <h2>Our Featured Toys</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="toy-card">
+                        <h3>Learning Blocks</h3>
+                        <p>Educational building blocks for kids.</p>
+                        <button>Explore</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="toy-card">
+                        <h3>Superhero Figures</h3>
+                        <p>Action figures of your favorite heroes.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="toy-card">
+                        <h3>Board Games</h3>
+                        <p>Fun games to enjoy with your family.</p>
+                        <button>View Games</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Contact us at info@minitimestore.com</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
